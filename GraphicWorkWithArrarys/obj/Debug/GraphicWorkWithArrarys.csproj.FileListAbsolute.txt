@@ -1,0 +1,12 @@
+D:\Projects\VSProj\GraphicWorkWithArrarys\GraphicWorkWithArrarys\bin\Debug\GraphicWorkWithArrarys.exe.config
+D:\Projects\VSProj\GraphicWorkWithArrarys\GraphicWorkWithArrarys\bin\Debug\GraphicWorkWithArrarys.exe
+D:\Projects\VSProj\GraphicWorkWithArrarys\GraphicWorkWithArrarys\bin\Debug\GraphicWorkWithArrarys.pdb
+D:\Projects\VSProj\GraphicWorkWithArrarys\GraphicWorkWithArrarys\obj\Debug\GraphicWorkWithArrarys.csprojResolveAssemblyReference.cache
+D:\Projects\VSProj\GraphicWorkWithArrarys\GraphicWorkWithArrarys\obj\Debug\GraphicWorkWithArrarys.Properties.Resources.resources
+D:\Projects\VSProj\GraphicWorkWithArrarys\GraphicWorkWithArrarys\obj\Debug\GraphicWorkWithArrarys.csproj.GenerateResource.Cache
+D:\Projects\VSProj\GraphicWorkWithArrarys\GraphicWorkWithArrarys\obj\Debug\GraphicWorkWithArrarys.exe
+D:\Projects\VSProj\GraphicWorkWithArrarys\GraphicWorkWithArrarys\obj\Debug\GraphicWorkWithArrarys.pdb
+D:\Projects\VSProj\GraphicWorkWithArrarys\GraphicWorkWithArrarys\obj\Debug\GraphicWorkWithArrarys.FM_WorkWithArr.resources
+D:\Projects\VSProj\!Git Repositories\GraphicWorkWithArrarys\GraphicWorkWithArrarys\bin\Debug\GraphicWorkWithArrarys.exe.config
+D:\Projects\VSProj\!Git Repositories\GraphicWorkWithArrarys\GraphicWorkWithArrarys\obj\Debug\GraphicWorkWithArrarys.exe
+D:\Projects\VSProj\!Git Repositories\GraphicWorkWithArrarys\GraphicWorkWithArrarys\obj\Debug\GraphicWorkWithArrarys.pdb
