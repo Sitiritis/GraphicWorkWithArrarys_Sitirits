@@ -92,7 +92,7 @@ namespace WkWArrays
                 return miny;
             }
         }
-        //Конец обёрок
+        // Конец обёрок
 
         public int this[int indy, int indx] // Идексация класса, для получения значений из массива
         {

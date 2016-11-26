@@ -6,14 +6,18 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
 using WkWArrays;
 
 namespace GraphicWorkWithArrarys
-{
+{    
     public partial class FM_WorkWithArr : Form
     {
+        private delegate void TimeDeleg(); // Создаём делегат TimeDeleg, который будет получать ничего , и возвращать тоже ничего
+
         ArrSort AS = new ArrSort(10, 10);
+        TimeDeleg Tm_Del; // Создаём экземпляр делегата TimeDeleg, с именем Tm_Del, как поле у нашей формы
 
         public FM_WorkWithArr()
         {
@@ -21,8 +25,27 @@ namespace GraphicWorkWithArrarys
         }
 
         private void FM_WorkWithArr_Load(object sender, EventArgs e) // На создание формы заполняем панель для вывода оригинального массива оригинальным массивом
-        {
+        {                                                            // и создаём новый поток, который будет выводить текущее время на LB_CurTime
             CreateLBArr(AS.Main_twodim_arr, 10, 10, PN_OrigArr);
+            Tm_Del = () => LB_CurTime.Text = DateTime.Now.ToLongTimeString(); // Задаём лямбда выражение, которое присваивает текущее время свойству Text элементу управления LB_CurTime, нашему экземпляру делегата
+            Thread TimeThread = new Thread(new ThreadStart(TDExecForever)); // Создаём новый поток, который будет выполнять метод TDExecForever
+            TimeThread.IsBackground = true; // Делаем поток фоновым
+            TimeThread.Start(); // Запускаем поток
+        }
+
+        private void TDExecForever() // Этот метод будет вызываться в потоке TimeThread
+        {
+            try
+            {
+                while (true) // Выполняется в бесконечном цикле (чтобы время обновлялось)
+                {
+                    if (LB_CurTime.InvokeRequired) // Запрашиваем разрешение на доступ к LB_CurTime из другого потока, и в случае успеха
+                        LB_CurTime.Invoke(Tm_Del); // Выполняем делегат, который содержит лямбда-выражение, которое меняет у LB_CurTime свойство Text на текущее время системы 
+                }
+            } catch (Exception E)
+            {
+                MessageBox.Show(E.Message);
+            }
         }
 
         private void BTN_SetSize_MouseUp(object sender, MouseEventArgs e) // Когда мы нажимаем на кнопку "Установить размер" создаём новый массив с указанными измерениями и выводим его
@@ -68,7 +91,7 @@ namespace GraphicWorkWithArrarys
 
         private void TSMI_Info_Click(object sender, EventArgs e) // Вывод информации
         {
-            MessageBox.Show("V. 1.0A", "Информация");
+            MessageBox.Show("V. 1.0a", "Информация");
         }
     }
 }

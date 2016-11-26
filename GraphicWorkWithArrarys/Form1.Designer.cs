@@ -39,6 +39,8 @@
             this.TSMI_SortBy = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_SortBy_Lines = new System.Windows.Forms.ToolStripMenuItem();
             this.TSMI_SortBy_Helix = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_About = new System.Windows.Forms.ToolStripMenuItem();
+            this.TSMI_Info = new System.Windows.Forms.ToolStripMenuItem();
             this.PN_OrigArr = new System.Windows.Forms.Panel();
             this.PN_SortedArr = new System.Windows.Forms.Panel();
             this.PN_ArrValues = new System.Windows.Forms.Panel();
@@ -98,8 +100,7 @@
             this.LB_SY8 = new System.Windows.Forms.Label();
             this.LB_SY9 = new System.Windows.Forms.Label();
             this.LB_SY10 = new System.Windows.Forms.Label();
-            this.TSMI_About = new System.Windows.Forms.ToolStripMenuItem();
-            this.TSMI_Info = new System.Windows.Forms.ToolStripMenuItem();
+            this.LB_CurTime = new System.Windows.Forms.Label();
             this.PN_ArrSize.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_Y)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.NUD_X)).BeginInit();
@@ -205,6 +206,7 @@
             // 
             // Menu_Fuctions
             // 
+            this.Menu_Fuctions.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.Menu_Fuctions.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.TSMI_SortBy,
             this.TSMI_About});
@@ -226,16 +228,31 @@
             // TSMI_SortBy_Lines
             // 
             this.TSMI_SortBy_Lines.Name = "TSMI_SortBy_Lines";
-            this.TSMI_SortBy_Lines.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_SortBy_Lines.Size = new System.Drawing.Size(140, 22);
             this.TSMI_SortBy_Lines.Text = "По строкам";
             this.TSMI_SortBy_Lines.Click += new System.EventHandler(this.TSMI_SortBy_Lines_Click);
             // 
             // TSMI_SortBy_Helix
             // 
             this.TSMI_SortBy_Helix.Name = "TSMI_SortBy_Helix";
-            this.TSMI_SortBy_Helix.Size = new System.Drawing.Size(152, 22);
+            this.TSMI_SortBy_Helix.Size = new System.Drawing.Size(140, 22);
             this.TSMI_SortBy_Helix.Text = "По спирали";
             this.TSMI_SortBy_Helix.Click += new System.EventHandler(this.TSMI_SortBy_Helix_Click);
+            // 
+            // TSMI_About
+            // 
+            this.TSMI_About.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.TSMI_Info});
+            this.TSMI_About.Name = "TSMI_About";
+            this.TSMI_About.Size = new System.Drawing.Size(103, 20);
+            this.TSMI_About.Text = "О программе...";
+            // 
+            // TSMI_Info
+            // 
+            this.TSMI_Info.Name = "TSMI_Info";
+            this.TSMI_Info.Size = new System.Drawing.Size(106, 22);
+            this.TSMI_Info.Text = "Инфо";
+            this.TSMI_Info.Click += new System.EventHandler(this.TSMI_Info_Click);
             // 
             // PN_OrigArr
             // 
@@ -821,26 +838,22 @@
             this.LB_SY10.TabIndex = 19;
             this.LB_SY10.Text = "10";
             // 
-            // TSMI_About
+            // LB_CurTime
             // 
-            this.TSMI_About.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.TSMI_Info});
-            this.TSMI_About.Name = "TSMI_About";
-            this.TSMI_About.Size = new System.Drawing.Size(103, 20);
-            this.TSMI_About.Text = "О программе...";
-            // 
-            // TSMI_Info
-            // 
-            this.TSMI_Info.Name = "TSMI_Info";
-            this.TSMI_Info.Size = new System.Drawing.Size(152, 22);
-            this.TSMI_Info.Text = "Инфо";
-            this.TSMI_Info.Click += new System.EventHandler(this.TSMI_Info_Click);
+            this.LB_CurTime.AutoSize = true;
+            this.LB_CurTime.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.LB_CurTime.Location = new System.Drawing.Point(470, 6);
+            this.LB_CurTime.Name = "LB_CurTime";
+            this.LB_CurTime.Size = new System.Drawing.Size(49, 13);
+            this.LB_CurTime.TabIndex = 24;
+            this.LB_CurTime.Text = "00:00:00";
             // 
             // FM_WorkWithArr
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(524, 392);
+            this.Controls.Add(this.LB_CurTime);
             this.Controls.Add(this.LB_SY10);
             this.Controls.Add(this.LB_OY10);
             this.Controls.Add(this.LB_SY9);
@@ -979,6 +992,7 @@
         private System.Windows.Forms.Label LB_SY10;
         private System.Windows.Forms.ToolStripMenuItem TSMI_About;
         private System.Windows.Forms.ToolStripMenuItem TSMI_Info;
+        private System.Windows.Forms.Label LB_CurTime;
     }
 }
 
